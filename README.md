@@ -4,4 +4,6 @@ Train a neural network to have its output reproduce the exact input. Why is this
 
 These types of models can help us generate optimal compression schemes.
 
+## Results
+
 ![image](https://github.com/user-attachments/assets/86069543-ec8c-46b8-a559-116e5f2c77b4)
