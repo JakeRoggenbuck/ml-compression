@@ -11,3 +11,8 @@ These types of models can help us generate optimal compression schemes.
 ## Results
 
 ![image](https://github.com/user-attachments/assets/86069543-ec8c-46b8-a559-116e5f2c77b4)
+
+![ml_compression](https://github.com/user-attachments/assets/6fb1696b-4d7a-466c-be76-0b2768cbd645)
+
+## TODO:
+- Restrict pixels instead of just channels in the convolutions
