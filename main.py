@@ -5,6 +5,7 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 
 class MatrixTransformer(nn.Module):
@@ -85,3 +86,31 @@ test(model, val_loader, criterion)
 
 print("Evaluating on test set:")
 test(model, test_loader, criterion)
+
+
+def visualize_results(model, dataloader):
+    model.eval()
+    images, _ = next(iter(dataloader))
+    images = images.to(device)
+
+    with torch.no_grad():
+        outputs = model(images)
+
+    images = images.cpu().numpy()
+    outputs = outputs.cpu().numpy()
+
+    fig, axes = plt.subplots(2, 5, figsize=(12, 5))
+    for i in range(5):
+        axes[0, i].imshow(images[i, 0], cmap="gray")
+        axes[0, i].set_title("Original")
+        axes[0, i].axis("off")
+
+        axes[1, i].imshow(outputs[i, 0], cmap="gray")
+        axes[1, i].set_title("Reconstructed")
+        axes[1, i].axis("off")
+
+    plt.tight_layout()
+    plt.show()
+
+
+visualize_results(model, test_loader)
