@@ -1,6 +1,6 @@
 # ml-compression
 
-Automatically create compression schemes convolutional neural networks
+Automatically create compression schemes convolutional neural networks. This is also known as an [Auto Encoder](https://en.wikipedia.org/wiki/Autoencoder).
 
 ## Description
 
